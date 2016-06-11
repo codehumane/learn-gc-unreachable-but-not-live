@@ -10,7 +10,7 @@ public class MemoryLeak {
         for (int idx = 0; idx < 100000000; idx++) {
 
             list.add("가나다라마바사아자차카타파하");
-//            Object obj = list.get(idx);
+            Object obj = list.get(idx);
 //
 //            /**
 //             * GC의 대상이 되지 않는다. <br/>
@@ -19,8 +19,8 @@ public class MemoryLeak {
 //             * 물론 list와 같이 stack에서 직접적으로 참조되는 객체는 아님. <br/>
 //             * 즉, Reachable But not Live 객체이다.
 //             */
-//            obj = null;
-            list = new ArrayList<>();
+            obj = null;
+//            list = new ArrayList<>();
 
             System.out.println(idx);
         }
