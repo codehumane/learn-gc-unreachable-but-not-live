@@ -1,16 +1,16 @@
 # GC
 
-- test for unreachable but not live
+test for unreachable but not live
 
 ## run command
 
-'''
+```
 java -cp . -verbose:gc -XX:+PrintGCDetails -Xloggc:gc.log com.codegraphy.MemoryLeak
-'''
+```
 
 ## gc log
 
-'''
+```
 ...
 10.612: [GC [PSYoungGen: 61952K->0K(87040K)] 88931K->26979K(261632K), 0.0095120 secs] [Times: user=0.07 sys=0.00, real=0.01 secs]
 11.462: [GC [PSYoungGen: 78848K->64K(87040K)] 105827K->51080K(261632K), 0.0381440 secs] [Times: user=0.29 sys=0.01, real=0.04 secs]
@@ -59,11 +59,11 @@ Heap
   object space 192512K, 42% used [0x00000007ee600000,0x00000007f3570930,0x00000007fa200000)
  PSPermGen       total 21504K, used 2653K [0x00000007e9400000, 0x00000007ea900000, 0x00000007ee600000)
   object space 21504K, 12% used [0x00000007e9400000,0x00000007e9697718,0x00000007ea900000)
-'''
+```
 
 ## console output
 
-'''
+```
 ...
 9230096
 9230097
@@ -77,4 +77,4 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
 	at java.util.ArrayList.ensureCapacityInternal(ArrayList.java:208)
 	at java.util.ArrayList.add(ArrayList.java:440)
 	at com.codegraphy.MemoryLeak.main(MemoryLeak.java:12)
-'''
+```
